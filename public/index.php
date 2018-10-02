@@ -1,51 +1,86 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: kylep
+ * User: kwilliams
  * Date: 9/26/18
- * Time: 7:06 PM
+ * Time: 6:42 PM
  */
 
-main::start('this is a test commit');
 
-class main{
-    public static function start($fileName){
-        $records = csv::getRecords($fileName);
+main::start('myfile.csv');
+
+class main {
+
+    static public function start($filename) {
+        $records = csv::getRecords($filename);
         $page = html::createTable($records);
         system::printPage($page);
     }
 }
 
-class csv{
-    public static function getRecords($fileName){
-        $records = $fileName;
-        return $records;
+class html {
+    static public function createTable($records) {
+
+        $html = '<table class="">'. "\n";
+        $column = html::tableColumn($records);
+        $html .= html::tableRow($column);
+        $column = html::tableColumn($records);
+        $html .= html::tableRow($column);
+        $column = html::tableColumn($records);
+        $html .= html::tableRow($column);
+        $html .= '</table>'. "\n";
+
+        return $html;
+    }
+
+    static public function tableRow($row) {
+            $html = '<tr>'. "\n";
+            $html .= $row;
+            $html .= '</tr>' . "\n";
+        return $html;
+    }
+    static public function tableColumn($column) {
+        $html = '<td>'. "\n";
+        $html .= $column;
+        $html .= '</td>' . "\n";
+        return $html;
+
     }
 }
 
-class system{
-    public static function printPage($page){
+class csv {
+
+    public static function getRecords($filename) {
+
+        $record = RecordFactory::create($record);
+        $records[] = $record;
+        print_r($records);
+        $records = $filename;
+        return $records;
+    }
+
+}
+class system {
+
+    public static function printPage($page) {
         echo $page;
     }
 }
 
-class html{
-    public static function createTable($records){
-        $html = '<table>';
-        $html .= html::createTableRow($records);
-        $html .= '</table>';
-        return $html;
+class Record
+{
+
+    public function __construct($record)
+    {
+
     }
-    public static function createTableRow($row){
-        $html = '<tr>';
-        $html .= html::createTableData($row);
-        $html .= '</tr>';
-        return $html;
-    }
-    public static function createTableData($data){
-        $html = '<td>';
-        $html .= $data;
-        $html .= '</td>';
-        return $html;
+
+ }
+
+class RecordFactory
+{
+    public static function create($record)
+    {
+        return new Record($record);
     }
 }

@@ -82,7 +82,12 @@ class Record
 
     public function __construct($record)
     {
-        return $record;
+        $this->componentID = $record[0];
+        $this->componentName = $record[1];
+        $this->componentGroup = $record[2];
+        $this->componentMessage = $record[3];
+        $this->redeemableStatus = $record[4];
+        $this->inStockDate = $record[5];
     }
  }
 

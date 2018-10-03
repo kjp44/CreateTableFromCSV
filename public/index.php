@@ -12,7 +12,13 @@ class main {
 
     static public function start($fileName) {
         $rawRecords = csv::readCSV($fileName);
-        csv::getRecordsAsObjects($rawRecords);
+        $properties = csv::getProperties($rawRecords);
+        $recordsAsObjects = (csv::getRecordsAsObjects($properties, $rawRecords));
+        foreach($recordsAsObjects as $recordsAsObject){
+            foreach($properties as $property){
+                print_r($recordsAsObject->{$property} . "<br/>");
+            }
+        }
         /*$page = html::createTable($records);
         system::printPage($page);*/
     }
@@ -54,18 +60,22 @@ class main {
 class csv {
     public static function readCSV($fileName)
     {
-        $records = array();
+        $rawRecords = array();
         $file = fopen($fileName, "r");
         while (!feof($file)) {
-            $records[] = fgetcsv($file);
+            $rawRecords[] = fgetcsv($file);
         }
         fclose($file);
-        return($records);
+        return($rawRecords);
     }
-    public static function getRecordsAsObjects($rawRecords){
+    public static function getProperties($rawRecords){
+        $properties = $rawRecords[0];
+        return $properties;
+    }
+    public static function getRecordsAsObjects($properties, $rawRecords){
         $records = array();
         foreach($rawRecords as $rawRecord) {
-            $records[] = RecordFactory::create($rawRecord);
+            $records[] = RecordFactory::create($properties, $rawRecord);
         }
         return $records;
     }
@@ -80,21 +90,18 @@ class csv {
 class Record
 {
 
-    public function __construct($record)
+    public function __construct($properties, $rawRecord)
     {
-        $this->componentID = $record[0];
-        $this->componentName = $record[1];
-        $this->componentGroup = $record[2];
-        $this->componentMessage = $record[3];
-        $this->redeemableStatus = $record[4];
-        $this->inStockDate = $record[5];
+        for($i = 0; $i<count($properties); $i++) {
+            $this->{$properties[$i]} = $rawRecord[$i];
+        }
     }
  }
 
 class RecordFactory
 {
-    public static function create($rawRecord)
+    public static function create($properties, $rawRecord)
     {
-        return new Record($rawRecord);
+        return new Record($properties, $rawRecord);
     }
 }

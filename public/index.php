@@ -6,81 +6,90 @@
  * Time: 6:42 PM
  */
 
-
-main::start('myfile.csv');
+main::start('myFile.csv');
 
 class main {
 
-    static public function start($filename) {
-        $records = csv::getRecords($filename);
-        $page = html::createTable($records);
-        system::printPage($page);
+    static public function start($fileName) {
+        $rawRecords = csv::readCSV($fileName);
+        csv::getRecordsAsObjects($rawRecords);
+        /*$page = html::createTable($records);
+        system::printPage($page);*/
     }
 }
 
-class html {
+/*class html {
     static public function createTable($records) {
-
         $html = '<table class="">'. "\n";
-        $column = html::tableColumn($records);
-        $html .= html::tableRow($column);
-        $column = html::tableColumn($records);
-        $html .= html::tableRow($column);
-        $column = html::tableColumn($records);
-        $html .= html::tableRow($column);
+        $html .= html::createTableHeRow($records[0]);
+        for($i = 1; $i < count($records); $i++){
+            $html .= html::createTableRow($records[$i]);
+        }
+
         $html .= '</table>'. "\n";
 
         return $html;
     }
 
-    static public function tableRow($row) {
+    static public function createTableRow($row) {
             $html = '<tr>'. "\n";
             $html .= $row;
             $html .= '</tr>' . "\n";
         return $html;
     }
-    static public function tableColumn($column) {
+    static public function createTableHeader($data){
+        $html = '<th>'. "\n";
+        $html .= $data;
+        $html .= '</th>'. "\n";
+        return $html;
+    }
+    static public function createTableData($data) {
         $html = '<td>'. "\n";
-        $html .= $column;
+        $html .= $data;
         $html .= '</td>' . "\n";
         return $html;
-
     }
-}
+}*/
 
 class csv {
-
-    public static function getRecords($filename) {
-
-        $record = RecordFactory::create($record);
-        $records[] = $record;
-        print_r($records);
-        $records = $filename;
+    public static function readCSV($fileName)
+    {
+        $records = array();
+        $file = fopen($fileName, "r");
+        while (!feof($file)) {
+            $records[] = fgetcsv($file);
+        }
+        fclose($file);
+        return($records);
+    }
+    public static function getRecordsAsObjects($rawRecords){
+        $records = array();
+        foreach($rawRecords as $rawRecord) {
+            $records[] = RecordFactory::create($rawRecord);
+        }
         return $records;
     }
-
 }
-class system {
+/*class system {
 
     public static function printPage($page) {
         echo $page;
     }
-}
+}*/
 
 class Record
 {
 
     public function __construct($record)
     {
-
+        return $record;
     }
-
  }
 
 class RecordFactory
 {
-    public static function create($record)
+    public static function create($rawRecord)
     {
-        return new Record($record);
+        return new Record($rawRecord);
     }
 }

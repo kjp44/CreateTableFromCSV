@@ -1,0 +1,166 @@
+COMPONENT_ID,COMPONENT_NAME,COMPONENT_GROUP,REDEEMABLE_STATUS
+SSFVK-S1,U.S.S. Enterprise-D Ship Miniature,Ship Miniatures,Yes
+SSFVK-S2,U.S.S. Sutherland Ship Miniature,Ship Miniatures,Yes
+SSFVK-S3,K'mpec's Attack Cruiser Ship Miniature,Ship Miniatures,Yes
+SSFVK-S4,I.K.S. Vorn Ship Miniature,Ship Miniatures,Yes
+SSFVK-1,U.S.S. Enterprise-D,Cards,Yes
+SSFVK-2,Generic Galaxy Class,Cards,Yes
+SSFVK-3,U.S.S. Sutherland,Cards,Yes
+SSFVK-4,Generic Nebula Class,Cards,Yes
+SSFVK-5,K'mpec's Attack Cruiser,Cards,Yes
+SSFVK-6,Generic Vor'cha Class,Cards,Yes
+SSFVK-7,I.K.S. Vorn,Cards,Yes
+SSFVK-8,Generic K'vort Class,Cards,Yes
+SSFVK-9,Jean-Luc Picard,Cards,Yes
+SSFVK-10,Data,Cards,Yes
+SSFVK-11,William T. Riker,Cards,Yes
+SSFVK-12/13,K'mpec,Cards,Yes
+SSFVK-14,Duras,Cards,Yes
+SSFVK-15/16,Lursa/B'Etor,Cards,Yes
+SSFVK-17,Christopher Hobson,Cards,Yes
+SSFVK-18,Beverly Crusher,Cards,Yes
+SSFVK-19,Deanna Troi,Cards,Yes
+SSFVK-20,Geordi La Forge,Cards,Yes
+SSFVK-21,Miles O'Brien,Cards,Yes
+SSFVK-22,Worf,Cards,Yes
+SSFVK-23,Kurn,Cards,Yes
+SSFVK-24,Klingon Helmsman,Cards,Yes
+SSFVK-25,Toral,Cards,Yes
+SSFVK-26,Klingon Bekk,Cards,Yes
+SSFVK-27,Make It So,Cards,Yes
+SSFVK-28,Riker Maneuver,Cards,Yes
+SSFVK-29,Today Is A Good Day To Die,Cards,Yes
+SSFVK-30,Blood Oath,Cards,Yes
+SSFVK-31,Photon Torpedoes,Cards,Yes
+SSFVK-32,Tactical Station,Cards,Yes
+SSFVK-33,Torpedo Fusillade,Cards,Yes
+SSFVK-34,Disruptor Cannon,Cards,Yes
+SSFVK-35,Exocomp,Cards,Yes
+SSFVK-36,Reinforced Bulkheads,Cards,Yes
+SSFVK-MC1,Galaxy Class Maneuver Card,Cards,Yes
+SSFVK-MC2,Nebula Class Maneuver Card,Cards,Yes
+SSFVK-MC3,Vor'cha Class Maneuver Card,Cards,Yes
+SSFVK-MC4,K'vort Class Maneuver Card,Cards,Yes
+SSFVK-DC1,Stunned Helmsman,Damage Cards,Yes
+SSFVK-DC2,Stunned Helmsman,Damage Cards,Yes
+SSFVK-DC3,Console Fire,Damage Cards,Yes
+SSFVK-DC4,Console Fire,Damage Cards,Yes
+SSFVK-DC5,Communications Failure,Damage Cards,Yes
+SSFVK-DC6,Communications Failure,Damage Cards,Yes
+SSFVK-DC7,Engine Room Fire,Damage Cards,Yes
+SSFVK-DC8,Engine Room Fire,Damage Cards,Yes
+SSFVK-DC9,Damaged Sensor Array,Damage Cards,Yes
+SSFVK-DC10,Damaged Sensor Array,Damage Cards,Yes
+SSFVK-DC11,Direct Hit!,Damage Cards,Yes
+SSFVK-DC12,Direct Hit!,Damage Cards,Yes
+SSFVK-DC13,Direct Hit!,Damage Cards,Yes
+SSFVK-DC14,Direct Hit!,Damage Cards,Yes
+SSFVK-DC15,Injured Captain,Damage Cards,Yes
+SSFVK-DC16,Injured Captain,Damage Cards,Yes
+SSFVK-DC17,Minor Explosion,Damage Cards,Yes
+SSFVK-DC18,Minor Explosion,Damage Cards,Yes
+SSFVK-DC19,Minor Hull Breach,Damage Cards,Yes
+SSFVK-DC20,Minor Hull Breach,Damage Cards,Yes
+SSFVK-DC21,Warp Core Breach,Damage Cards,Yes
+SSFVK-DC22,Warp Core Breach,Damage Cards,Yes
+SSFVK-DC23,Warp Core Breach,Damage Cards,Yes
+SSFVK-DC24,Munitions Failure,Damage Cards,Yes
+SSFVK-DC25,Munitions Failure,Damage Cards,Yes
+SSFVK-DC26,Structural Damage,Damage Cards,Yes
+SSFVK-DC27,Structural Damage,Damage Cards,Yes
+SSFVK-DC28,Jostled Navigator,Damage Cards,Yes
+SSFVK-DC29,Jostled Navigator,Damage Cards,Yes
+SSFVK-DC30,Power Disruption,Damage Cards,Yes
+SSFVK-DC31,Power Disruption,Damage Cards,Yes
+SSFVK-DC32,Weapons Malfunction,Damage Cards,Yes
+SSFVK-DC33,Weapons Malfunction,Damage Cards,Yes
+SSFVK-TS1,Token Sheet 1,Token Sheets,Yes
+SSFVK-TS2,Token Sheet 2,Token Sheets,Yes
+SSFVK-TS3,Token Sheet 3,Token Sheets,Yes
+SSFVK-TS4,Token Sheet 4,Token Sheets,Yes
+SSFVK-TS5,Token Sheet 5,Token Sheets,Yes
+SSFVK-TS6,Token Sheet 6,Token Sheets,Yes
+SSFVK-TS7,Token Sheet 7,Token Sheets,Yes
+SSFVK-IT1,U.S.S. Enterprise-D Ship Token,Individual Tokens,Yes
+SSFVK-IT2,U.S.S. Sutherland Ship Token,Individual Tokens,Yes
+SSFVK-IT3,K'mpec's Attack Cruiser Ship Token,Individual Tokens,Yes
+SSFVK-IT4,I.K.S. Vorn Ship Token,Individual Tokens,Yes
+SSFVK-IT5,Captain ID Token - Lursa,Individual Tokens,Yes
+SSFVK-IT6,Captain ID Token - B'Etor,Individual Tokens,Yes
+SSFVK-IT7,Captain ID Token - Duras,Individual Tokens,Yes
+SSFVK-IT8,Captain ID Token - K'mpec,Individual Tokens,Yes
+SSFVK-IT9,Captain ID Token - Data,Individual Tokens,Yes
+SSFVK-IT10,Captain ID Token - Jean-Luc Picard,Individual Tokens,Yes
+SSFVK-IT11,Captain ID Token - William T. Riker,Individual Tokens,Yes
+SSFVK-IT12,Disabled Token,Individual Tokens,Yes
+SSFVK-IT13,Auxiliary Power Token,Individual Tokens,Yes
+SSFVK-IT14,Evade Token,Individual Tokens,Yes
+SSFVK-IT15,Scan Token,Individual Tokens,Yes
+SSFVK-IT16,Battle Stations Token,Individual Tokens,Yes
+SSFVK-IT17,Cloak Token,Individual Tokens,Yes
+SSFVK-IT18,Critical Hit Token,Individual Tokens,Yes
+SSFVK-IT19,Shield Token,Individual Tokens,Yes
+SSFVK-IT20,Time Token,Individual Tokens,Yes
+SSFVK-IT21,Initiative Token,Individual Tokens,Yes
+SSFVK-IT22,Fleet Action Token,Individual Tokens,Yes
+SSFVK-IT23,Effect Token - William T. Riker,Individual Tokens,Yes
+SSFVK-IT24,Effect Token - Deanna Troi,Individual Tokens,Yes
+SSFVK-IT25,Effect Token - Geordi La Forge,Individual Tokens,Yes
+SSFVK-IT26,Minefield Token,Individual Tokens,Yes
+SSFVK-IT27,Objective Token 1,Individual Tokens,Yes
+SSFVK-IT28,Objective Token 2,Individual Tokens,Yes
+SSFVK-IT29,Objective Token 3,Individual Tokens,Yes
+SSFVK-IT30,Objective Token 4,Individual Tokens,Yes
+SSFVK-IT31,Objective Token 5,Individual Tokens,Yes
+SSFVK-IT32,Objective Token 6,Individual Tokens,Yes
+SSFVK-IT33,Galaxy Class Maneuver Dial - Dial,Individual Tokens,Yes
+SSFVK-IT34,Galaxy Class Maneuver Dial - Front,Individual Tokens,Yes
+SSFVK-IT35,Nebula Class Maneuver Dial - Dial,Individual Tokens,Yes
+SSFVK-IT36,Nebula Class Maneuver Dial - Front,Individual Tokens,Yes
+SSFVK-IT37,Vor'cha Class Maneuver Dial - Dial,Individual Tokens,Yes
+SSFVK-IT38,Vor'cha Class Maneuver Dial - Front,Individual Tokens,Yes
+SSFVK-IT39,K'vort Class Maneuver Dial - Dial,Individual Tokens,Yes
+SSFVK-IT40,K'vort Class Maneuver Dial - Front,Individual Tokens,Yes
+SSFVK-IT41,Mission Token 1,Individual Tokens,Yes
+SSFVK-IT42,Mission Token 2,Individual Tokens,Yes
+SSFVK-IT43,Mission Token 3,Individual Tokens,Yes
+SSFVK-IT44,Mission Token 4,Individual Tokens,Yes
+SSFVK-IT45,Mission Token 5,Individual Tokens,Yes
+SSFVK-IT46,Mission Token 6,Individual Tokens,Yes
+SSFVK-IT47,Mission Token 7,Individual Tokens,Yes
+SSFVK-IT48,Mission Token 8,Individual Tokens,Yes
+SSFVK-IT49,Mission Token 9,Individual Tokens,Yes
+SSFVK-IT50,Mission Token 10,Individual Tokens,Yes
+SSFVK-IT51,Mission Token 11,Individual Tokens,Yes
+SSFVK-IT52,Mission Token 12,Individual Tokens,Yes
+SSFVK-IT53,Blue Target Lock Token A,Individual Tokens,Yes
+SSFVK-IT54,Blue Target Lock Token B,Individual Tokens,Yes
+SSFVK-IT55,Blue Target Lock Token C,Individual Tokens,Yes
+SSFVK-IT56,Blue Target Lock Token D,Individual Tokens,Yes
+SSFVK-IT57,Blue Target Lock Token E,Individual Tokens,Yes
+SSFVK-IT58,Blue Target Lock Token F,Individual Tokens,Yes
+SSFVK-IT59,Red Target Lock Token A,Individual Tokens,Yes
+SSFVK-IT60,Red Target Lock Token B,Individual Tokens,Yes
+SSFVK-IT61,Red Target Lock Token C,Individual Tokens,Yes
+SSFVK-IT62,Red Target Lock Token D,Individual Tokens,Yes
+SSFVK-IT63,Red Target Lock Token E,Individual Tokens,Yes
+SSFVK-IT64,Red Target Lock Token F,Individual Tokens,Yes
+SSFVK-IT65,Admiral Token - +1,Individual Tokens,Yes
+SSFVK-IT66,1 Straight Maneuver Template,Individual Tokens,Yes
+SSFVK-IT67,2 Straight Maneuver Template,Individual Tokens,Yes
+SSFVK-IT68,3 Straight Maneuver Template,Individual Tokens,Yes
+SSFVK-IT69,4 Straight Maneuver Template,Individual Tokens,Yes
+SSFVK-IT70,5 Straight Maneuver Template,Individual Tokens,Yes
+SSFVK-IT71,6 Straight Maneuver Template,Individual Tokens,Yes
+SSFVK-IT72,1 Bank Maneuver Template,Individual Tokens,Yes
+SSFVK-IT73,2 Bank Maneuver Template,Individual Tokens,Yes
+SSFVK-IT74,3 Bank Maneuver Template,Individual Tokens,Yes
+SSFVK-IT75,4 Bank Maneuver Template,Individual Tokens,Yes
+SSFVK-IT76,1 Turn Maneuver Template,Individual Tokens,Yes
+SSFVK-IT77,2 Turn Maneuver Template,Individual Tokens,Yes
+SSFVK-IT78,3 Turn Maneuver Template,Individual Tokens,Yes
+SSFVK-IT79,Planet Token,Individual Tokens,Yes
+SSFVK-IT80,Range Ruler,Individual Tokens,Yes
+SSFVK-P1,Dial Connector Set,Plastic,Yes
+SSFVK-P2,Base,Plastic,Yes
+SSFVK-P3,Peg,Plastic,Yes

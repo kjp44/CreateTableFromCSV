@@ -6,56 +6,43 @@
  * Time: 6:42 PM
  */
 
-main::start('myFile.csv');
+main::start('example.csv');
 
 class main {
-
     static public function start($fileName) {
         $rawRecords = csv::readCSV($fileName);
-        $properties = csv::getProperties($rawRecords);
-        $recordsAsObjects = (csv::getRecordsAsObjects($properties, $rawRecords));
-        foreach($recordsAsObjects as $recordsAsObject){
-            foreach($properties as $property){
-                print_r($recordsAsObject->{$property} . "<br/>");
-            }
-        }
-        /*$page = html::createTable($records);
-        system::printPage($page);*/
+        $properties = $rawRecords[0];
+        array_splice($rawRecords,0,1);
+        $recordsAsObjects = (csv::convertRecordsToObjects($properties, $rawRecords));
+        $tableHTML = html::createTable($properties, $recordsAsObjects);
+        system::printTable($tableHTML);
     }
 }
 
-/*class html {
-    static public function createTable($records) {
-        $html = '<table class="">'. "\n";
-        $html .= html::createTableHeRow($records[0]);
-        for($i = 1; $i < count($records); $i++){
-            $html .= html::createTableRow($records[$i]);
+class html {
+    static public function createTable($properties, $recordsAsObjects) {
+        $html = '<table class="table table-striped">';
+        foreach($recordsAsObjects as $recordAsObject){
+            $html .= html::createTableRow($properties, $recordAsObject);
         }
-
-        $html .= '</table>'. "\n";
-
+        $html .= '</table>';
         return $html;
     }
-
-    static public function createTableRow($row) {
-            $html = '<tr>'. "\n";
-            $html .= $row;
-            $html .= '</tr>' . "\n";
-        return $html;
-    }
-    static public function createTableHeader($data){
-        $html = '<th>'. "\n";
-        $html .= $data;
-        $html .= '</th>'. "\n";
+    static public function createTableRow($properties, $recordAsObject) {
+            $html = '<tr>';
+            foreach($properties as $property){
+                $html .= html::createTableData($recordAsObject->{$property});
+            }
+            $html .= '</tr>';
         return $html;
     }
     static public function createTableData($data) {
-        $html = '<td>'. "\n";
+        $html = '<td>';
         $html .= $data;
-        $html .= '</td>' . "\n";
+        $html .= '</td>';
         return $html;
     }
-}*/
+}
 
 class csv {
     public static function readCSV($fileName)
@@ -68,11 +55,7 @@ class csv {
         fclose($file);
         return($rawRecords);
     }
-    public static function getProperties($rawRecords){
-        $properties = $rawRecords[0];
-        return $properties;
-    }
-    public static function getRecordsAsObjects($properties, $rawRecords){
+    public static function convertRecordsToObjects($properties, $rawRecords){
         $records = array();
         foreach($rawRecords as $rawRecord) {
             $records[] = RecordFactory::create($properties, $rawRecord);
@@ -80,12 +63,12 @@ class csv {
         return $records;
     }
 }
-/*class system {
 
-    public static function printPage($page) {
-        echo $page;
+class system {
+    public static function printTable($tableHTML) {
+        echo $tableHTML;
     }
-}*/
+}
 
 class Record
 {
@@ -102,6 +85,7 @@ class RecordFactory
 {
     public static function create($properties, $rawRecord)
     {
+
         return new Record($properties, $rawRecord);
     }
 }

@@ -5,7 +5,6 @@
  * Date: 9/26/18
  * Time: 6:42 PM
  */
-
 main::start('example.csv');
 
 class main {
@@ -22,21 +21,41 @@ class main {
 class html {
     static public function createTable($properties, $recordsAsObjects) {
         $html = '<table class="table table-striped">';
+        $html .= html::createTableHeader($properties);
         foreach($recordsAsObjects as $recordAsObject){
             $html .= html::createTableRow($properties, $recordAsObject);
         }
         $html .= '</table>';
         return $html;
     }
+    static public function createTableHeader($properties){
+        $html = "<thead>";
+        $html .= "<tr>";
+        foreach($properties as $property){
+            $html .= html::createTableHeaderData($property);
+        }
+        $html .= "</tr>";
+        $html .= "</thead>";
+        return $html;
+    }
+    static public function createTableHeaderData($property){
+        $html = '<th scope="col">';
+        $html .= $property;
+        $html .= "</th>";
+        return $html;
+    }
     static public function createTableRow($properties, $recordAsObject) {
             $html = '<tr>';
-            foreach($properties as $property){
-                $html .= html::createTableData($recordAsObject->{$property});
+            $html .= '<th scope="row">';
+            $html .= $recordAsObject->{$properties[0]};
+            $html .= '</th>';
+            for($i = 1; $i < count($properties); $i++){
+                $html .= html::createTableRowData($recordAsObject->{$properties[$i]});
             }
             $html .= '</tr>';
         return $html;
     }
-    static public function createTableData($data) {
+    static public function createTableRowData($data) {
         $html = '<td>';
         $html .= $data;
         $html .= '</td>';

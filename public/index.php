@@ -14,7 +14,7 @@ class main {
         array_splice($rawRecords,0,1);
         $recordsAsObjects = (csv::convertRecordsToObjects($properties, $rawRecords));
         $tableHTML = html::createTable($properties, $recordsAsObjects);
-        system::printTable($tableHTML);
+        system::printPage($tableHTML);
     }
 }
 
@@ -84,7 +84,7 @@ class csv {
 }
 
 class system {
-    public static function printTable($tableHTML) {
+    public static function printPage($tableHTML) {
         echo $tableHTML;
     }
 }
